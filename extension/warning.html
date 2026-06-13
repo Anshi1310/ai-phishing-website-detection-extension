@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phishing Warning - CyberShield</title>
+  <link rel="stylesheet" href="warning.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <div class="container">
+    
+    <div class="header">
+      <div class="shield-icon danger pulse-ring">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L3 7V12C3 16.55 6.84 20.74 12 22C17.16 20.74 21 16.55 21 12V7L12 2Z" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="1.5"/>
+          <path d="M12 8V12M12 16H12.01" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="warning-badge">⚠ THREAT DETECTED</div>
+      <h1 class="title">Phishing Website Blocked</h1>
+      <p class="subtitle">CyberShield has prevented access to a dangerous website</p>
+    </div>
+
+    <!-- URL Card -->
+    <div class="info-card url-card">
+      <div class="card-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        Blocked URL
+      </div>
+      <div class="url-text" id="blocked-url">Loading...</div>
+    </div>
+
+    
+    <div class="stats-row">
+      <div class="stat-card danger-stat">
+        <div class="stat-value" id="confidence-value">--</div>
+        <div class="stat-label">Threat Confidence</div>
+      </div>
+      <div class="stat-card danger-stat">
+        <div class="stat-value" id="risk-level">HIGH</div>
+        <div class="stat-label">Risk Level</div>
+      </div>
+    </div>
+
+    
+    <div class="confidence-section">
+      <div class="confidence-header">
+        <span>Threat Score</span>
+        <span id="conf-pct">0%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill danger-fill" id="conf-bar" style="width: 0%"></div>
+      </div>
+    </div>
+
+    
+    <div class="info-card reasons-card">
+      <div class="card-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Detection Reasons
+      </div>
+      <ul class="reasons-list" id="reasons-list">
+        <li>Analyzing threat indicators...</li>
+      </ul>
+    </div>
+
+    
+    <div class="actions">
+      <button class="btn btn-primary" id="go-back-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        Go Back to Safety
+      </button>
+      <button class="btn btn-danger" id="proceed-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Proceed Anyway (Unsafe)
+      </button>
+    </div>
+
+    <p class="disclaimer">
+      Proceeding may expose your personal data, passwords, and financial information to attackers.
+    </p>
+  </div>
+
+  <script src="warning.js"></script>
+</body>
+</html>

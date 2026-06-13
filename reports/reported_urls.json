@@ -1,0 +1,12 @@
+[
+  {
+    "url": "http://paypal-login-security-check.com/",
+    "timestamp": "2026-05-20T21:24:01.178043+00:00",
+    "label": "phishing",
+    "confidence": 0.7833,
+    "reasons": [
+      "Domain uses hyphens to mimic legitimate sites (e.g. paypal-secure.com)",
+      "Website is not secured with HTTPS encryption"
+    ]
+  }
+]
