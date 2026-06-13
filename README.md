@@ -192,14 +192,44 @@ Response: { "status": "reported", "message": "URL reported successfully" }
 
 ## Screenshots
 
+### Chrome Extension
+
+![Chrome Extension](screenshots/chrome-extension.png)
+
+CyberShield installed as a Chrome Manifest V3 extension.
+
+---
+
 ### Safe Website Detection
-![Safe Website](screenshots/safe.png)
 
-### Phishing Website Warning
-![Phishing Website](screenshots/phishing.png)
+![Safe Detection](screenshots/safe-detection.png)
 
-### Scan History
-![History](screenshots/history.png)
+Real-time analysis of legitimate websites with confidence scoring and indicator explanations.
+
+---
+
+### Dashboard & Scan History
+
+![Dashboard](screenshots/dashboard-history.png)
+
+Extension dashboard displaying scan statistics, phishing alerts, and recent scan history.
+
+---
+
+### Phishing Website Blocking
+
+![Phishing Warning](screenshots/phishing-warning.png)
+
+CyberShield automatically blocks suspicious websites and explains the detected threat indicators.
+
+---
+
+### Model Performance
+
+![Model Performance](screenshots/model-performance.png)
+
+Random Forest classifier evaluation results showing 97.51% accuracy, confusion matrix, and classification metrics.
+
 
 ## Key Achievements
 
