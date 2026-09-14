@@ -1,12 +1,18 @@
 # CyberShield: AI-Based Phishing Website Detection Browser Extension
 
-> Final Year Project | Chrome Extension + Flask Backend + Random Forest ML Model
+> Final Year Project | Machine Learning + Chrome Extension + Flask REST API
 
 ---
 
 ## Project Overview
 
-CyberShield is a real-time phishing website detection system built as a Chrome browser extension. When a user visits any website, the extension automatically extracts features from the URL, sends them to a local Flask API, and a trained Random Forest model predicts whether the site is **phishing** or **legitimate**. If phishing is detected, the user is immediately redirected to a warning page and blocked from accessing the site.
+CyberShield is a real-time phishing website detection system built as a Chrome browser extension. When a user visits any website, the extension automatically extracts features from the URL, sends them to a local Flask API, and a trained Random Forest model predicts whether the site is **phishing** or **legitimate**. If a phishing site is detected, the extension redirects the user to a warning page instead of allowing the suspicious site to be accessed.
+
+---
+
+### System Architecture
+
+CyberShield follows a client-server ML architecture where the Chrome extension handles URL monitoring and user interaction, while the Flask backend performs feature extraction and Random Forest-based classification.
 
 ---
 
@@ -76,7 +82,7 @@ python model/train_model.py
 
 Output:
 ```
-Accuracy: ~0.97
+Accuracy: 0.9751
 Confusion Matrix: ...
 Classification Report: ...
 Saved model to: model/model.pkl
@@ -155,7 +161,7 @@ Response: { "status": "reported", "message": "URL reported successfully" }
 - **Algorithm:** Random Forest Classifier
 - **Parameters:** 120 trees, max depth 18, random state 42
 - **Train/Test Split:** 80% / 20% (stratified)
-- **Accuracy:** ~97%
+- **Accuracy:** 97.51%
 - **Feature Encoding:** 1 = legitimate, -1 = phishing, 0 = unknown/suspicious
 
 ### Key Features Used
@@ -233,17 +239,19 @@ Random Forest classifier evaluation results showing 97.51% accuracy, confusion m
 
 ## Key Achievements
 
-- Achieved ~97% classification accuracy using Random Forest.
-- Developed a real-time Chrome Extension using Manifest V3.
-- Integrated Machine Learning with a Flask REST API.
-- Implemented phishing blocking, confidence scoring, and scan history.
-- Designed a user-friendly interface for cybersecurity awareness.
+- Achieved **97.51% classification accuracy** using a Random Forest classifier.
+- Built an end-to-end phishing detection pipeline using **URL feature extraction → ML classification → Flask REST API → Chrome Extension**.
+- Implemented automatic website scanning using **Chrome Manifest V3**.
+- Developed automated phishing blocking with warning pages, confidence scores, and threat explanations.
+- Implemented scan history, CSV export, reporting, notifications, and dynamic risk indicators.
+- Integrated a trained ML model into a practical browser-based cybersecurity application.
+
 
 ## Author
 
-Anshita Gautam
+**Anshita Gautam**
 
-BCA Graduate | Aspiring Software Developer
+BCA Graduate | Aspiring AI/ML & Software Developer
 
-GitHub: https://github.com/Anshi1310
+GitHub: https://github.com/Anshi1310  
 LinkedIn: https://linkedin.com/in/anshita13
